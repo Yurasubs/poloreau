@@ -1,0 +1,4 @@
+Pillow
+bs4
+aiohttp
+git+git://github.com/Pycord-Development/pycord@master#egg=package-two
