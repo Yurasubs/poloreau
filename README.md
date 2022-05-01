@@ -1,4 +1,4 @@
 # poloreau
 
-Bot Discord image2ass, Brainly
+Bot Discord image2ass, Brainly.
 Made by Pycord
