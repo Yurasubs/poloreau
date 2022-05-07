@@ -197,28 +197,6 @@ async def powerthesaurus(ctx, *, query):
         )
         return await ctx.send(embed=embed)
 
-
-@bot.command(name="koleksi")
-async def koleksi(ctx, index):
-    path = []
-    while True:
-        path_str = "/".join(path)
-        url = f"https://db.shirozone.workers.dev/{index}/{parse.quote(path_str)}"
-        payload = {
-            "password": "",
-            "page_token": "",
-            "page_index": 0
-        }
-        headers = {
-            "Authorization": ""
-        }
-        async with aiohttp.ClientSession() as sesi:
-            async with sesi.post(url, data=payload, headers=headers) as respon:
-                data = await respon.json()
-
-        return await ctx.send(data)
-
-
 @bot.event
 async def on_disconnect():
     await bot.sesi.close()
